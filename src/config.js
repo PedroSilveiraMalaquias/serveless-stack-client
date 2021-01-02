@@ -1,4 +1,6 @@
 const config = {
+  STRIPE_KEY: "pk_test_51I4soCD2dzbaXEhKdMPIh2hsRThH7P7aAsvURvv5hu7zPYk6kWicNciPryG1y7AtSTpsCpOnQo4UKBdMkt2V7EME003kDtJ2qq",
+  MAX_ATTACHMENT_SIZE: 5000000,
   s3: {
     REGION: "sa-east-1",
     BUCKET: "wisely-ps-upload",
