@@ -8,6 +8,7 @@ import { BsPencilSquare } from "react-icons/bs";
 import { LinkContainer } from "react-router-bootstrap";
 
 export default function Home() {
+  
   const [notes, setNotes] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
@@ -34,53 +35,138 @@ export default function Home() {
     return API.get("notes", "/notes");
   }
 
-  function renderNotesList(notes) {
-    return (
-      <>
-        <LinkContainer to="/notes/new">
-          <ListGroup.Item action className="py-3 text-nowrap text-truncate">
-            <BsPencilSquare size={17} />
-            <span className="ml-2 font-weight-bold">Create a new note</span>
-          </ListGroup.Item>
-        </LinkContainer>
-        {notes.map(({ noteId, content, createdAt }) => (
-          <LinkContainer key={noteId} to={`/notes/${noteId}`}>
-            <ListGroup.Item action>
-              <span className="font-weight-bold">
-                {content.trim().split("\n")[0]}
-              </span>
-              <br />
-              <span className="text-muted">
-                Created: {new Date(createdAt).toLocaleString()}
-              </span>
-            </ListGroup.Item>
-          </LinkContainer>
-        ))}
-      </>
-    );
-}
-
-  function renderLander() {
-    return (
-      <div className="lander">
-        <h1>Scratch</h1>
-        <p className="text-muted">A simple note taking app</p>
-      </div>
-    );
-  }
-
-  function renderNotes() {
-    return (
-      <div className="notes">
-        <h2 className="pb-3 mt-4 mb-3 border-bottom">Your Notes</h2>
-        <ListGroup>{!isLoading && renderNotesList(notes)}</ListGroup>
-      </div>
-    );
-  }
-
   return (
-    <div className="Home">
-      {isAuthenticated ? renderNotes() : renderLander()}
-    </div>
-  );
+      <div className="lander">
+        <div class="container">
+          <div class="row" >
+            <div class="col">
+               <>
+                <LinkContainer to="/MinionGuarda">
+                  <ListGroup.Item action className="py-3">
+                 <div class="card">
+                    <img class="card-img-top" src="Minion-Guarda-Real.png" alt="Card image cap"/>
+                    <div class="card-body">
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">Minion Guarda Real</span>
+                      </div>
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">R$ 9,99</span>
+                      </div>
+                    </div>
+                  </div>
+                  </ListGroup.Item>
+                </LinkContainer>
+               </>
+            </div>
+            <div class="col">
+              
+              <>
+                <LinkContainer to="/ReiMinion">
+                  <ListGroup.Item action className="py-3">
+                 <div class="card">
+                    <img class="card-img-top" src="Rei-Minion.png" alt="Card image cap"/>
+                    <div class="card-body">
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">Rei Minion</span>
+                      </div>
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">R$ 9,99</span>
+                      </div>
+                    </div>
+                  </div>
+                  </ListGroup.Item>
+                </LinkContainer>
+               </>
+              
+            </div>
+            <div class="col">
+               <>
+                <LinkContainer to="/MinionBombeiro">
+                  <ListGroup.Item action className="py-3">
+                 <div class="card">
+                    <img class="card-img-top" src="Minion-Bombeiro.png" alt="Card image cap"/>
+                    <div class="card-body">
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">Minion Bombeiro</span>
+                      </div>
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">R$ 9,99</span>
+                      </div>
+                    </div>
+                  </div>
+                  </ListGroup.Item>
+                </LinkContainer>
+               </>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+              <br></br>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+               <>
+                <LinkContainer to="/MinionGuarda">
+                  <ListGroup.Item action className="py-3">
+                 <div class="card">
+                    <img class="card-img-top" src="Minion-de-pijama.png" alt="Card image cap"/>
+                    <div class="card-body">
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">Minion de pijama</span>
+                      </div>
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">R$ 9,99</span>
+                      </div>
+                    </div>
+                  </div>
+                  </ListGroup.Item>
+                </LinkContainer>
+               </>
+            </div>
+            <div class="col">
+               <>
+                <LinkContainer to="/MinionGuarda">
+                  <ListGroup.Item action className="py-3">
+                 <div class="card">
+                    <img class="card-img-top" src="Minion-dono-da-lua.png" alt="Card image cap"/>
+                    <div class="card-body">
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">Minion dono da lua</span>
+                      </div>
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">R$ 9,99</span>
+                      </div>
+                    </div>
+                  </div>
+                  </ListGroup.Item>
+                </LinkContainer>
+               </>
+            </div>
+            <div class="col">
+               <>
+                <LinkContainer to="/MinionGuarda">
+                  <ListGroup.Item action className="py-3">
+                 <div class="card">
+                    <img class="card-img-top" src="Senhora-minion.png" alt="Card image cap"/>
+                    <div class="card-body">
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">Senhora Minion</span>
+                      </div>
+                      <div class="row">
+                        <span className="mx-auto font-weight-bold">R$ 9,99</span>
+                      </div>
+                    </div>
+                  </div>
+                  </ListGroup.Item>
+                </LinkContainer>
+               </>
+            </div>
+          </div>
+        </div> 
+       
+      </div>
+    );
 }

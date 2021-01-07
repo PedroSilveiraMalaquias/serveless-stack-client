@@ -71,14 +71,14 @@ export default function Signup() {
     return (
       <Form onSubmit={handleConfirmationSubmit}>
         <Form.Group controlId="confirmationCode" size="lg">
-          <Form.Label>Confirmation Code</Form.Label>
+          <Form.Label>Código de Confirmação</Form.Label>
           <Form.Control
             autoFocus
             type="tel"
             onChange={handleFieldChange}
             value={fields.confirmationCode}
           />
-          <Form.Text muted>Please check your email for the code.</Form.Text>
+          <Form.Text muted>Um e-mail com o código de confirmação foi enviado.</Form.Text>
         </Form.Group>
         <LoaderButton
           block
@@ -107,7 +107,7 @@ export default function Signup() {
           />
         </Form.Group>
         <Form.Group controlId="password" size="lg">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Senha</Form.Label>
           <Form.Control
             type="password"
             value={fields.password}
@@ -115,7 +115,7 @@ export default function Signup() {
           />
         </Form.Group>
         <Form.Group controlId="confirmPassword" size="lg">
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label>Confirme a senha</Form.Label>
           <Form.Control
             type="password"
             onChange={handleFieldChange}
@@ -130,7 +130,7 @@ export default function Signup() {
           isLoading={isLoading}
           disabled={!validateForm()}
         >
-          Signup
+          Cadastre-se
         </LoaderButton>
       </Form>
     );

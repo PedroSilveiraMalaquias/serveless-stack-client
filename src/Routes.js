@@ -9,11 +9,24 @@ import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
+import MinionGuarda from "./containers/MinionGuarda";
+import ReiMinion from "./containers/ReiMinion";
+import MinionBombeiro from "./containers/MinionBombeiro";
+
 export default function Routes() {
   return (
     <Switch>
       <Route exact path="/">
         <Home />
+      </Route>
+      <Route exact path="/MinionGuarda">
+        <MinionGuarda />
+      </Route>
+      <Route exact path="/ReiMinion">
+        <ReiMinion />
+      </Route>
+      <Route exact path="/MinionBombeiro">
+        <MinionBombeiro />
       </Route>
       <UnauthenticatedRoute exact path="/login">
         <Login />
@@ -30,10 +43,13 @@ export default function Routes() {
       <AuthenticatedRoute exact path="/notes/:id">
         <Notes />
       </AuthenticatedRoute>
+      <AuthenticatedRoute exact path="/MinionBombeiro">
+        <MinionBombeiro />
+      </AuthenticatedRoute>
+      
       <Route>
         <NotFound />
       </Route>
-        
     </Switch>
   );
 }

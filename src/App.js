@@ -44,7 +44,7 @@ function App() {
         <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
           <LinkContainer to="/">
             <Navbar.Brand className="font-weight-bold text-muted">
-              Scratch
+              Mini Minions
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle />
@@ -53,23 +53,24 @@ function App() {
               {isAuthenticated ? (
                 <>
                   <LinkContainer to="/settings">
-                    <Nav.Link>Settings</Nav.Link>
+                    <Nav.Link>Pagamento</Nav.Link>
                   </LinkContainer>
-                  <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                  <Nav.Link onClick={handleLogout}>Sair</Nav.Link>
                 </>
               ) : (
                 <>
                   <LinkContainer to="/signup">
-                    <Nav.Link>Signup</Nav.Link>
+                    <Nav.Link>Cadastrar-se</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/login">
-                    <Nav.Link>Login</Nav.Link>
+                    <Nav.Link>Entrar</Nav.Link>
                   </LinkContainer>
                 </>
               )}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+        
         <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
           <Routes />
         </AppContext.Provider>

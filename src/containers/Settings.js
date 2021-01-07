@@ -35,7 +35,7 @@ export default function Settings() {
       source: token.id
     });
 
-    alert("Your card has been charged successfully!");
+    alert("Compra realizada com sucesso!");
     history.push("/");
   } catch (e) {
     onError(e);
