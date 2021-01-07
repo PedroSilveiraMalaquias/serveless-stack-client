@@ -1,6 +1,6 @@
 import React, {useEffect } from "react";
 import { useAppContext } from "../libs/contextLib";
-import "./ReiMinion.css";
+import "./MinionDonoDaLua.css";
 export default function Home() {
   const { isAuthenticated } = useAppContext();
   useEffect(() =>[isAuthenticated]);
@@ -10,14 +10,14 @@ export default function Home() {
         <div class="container">
           <div class="row">
             <div class="col-5">
-              <img src="Rei-Minion.png" alt="" class="img-thumbnail"/>
+             <img src="Minion-dono-da-lua.png" alt=""  class="img-thumbnail"/>
             </div>
             <div class="col">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h1>Rei Minion</h1>
-                            <p class="text-left">O rei minion adora mandar. Adquira agora mesmo e coloque ordem no seu reino, digo, na sua coleção!</p>
+                           <h1>Minion dono da lua</h1>
+                            <p class="text-left">O minion dono da lua adora causar uma confusão e cria planos mirabolantes para conseguir que a lua seja sua. Ele vai adicionar um toque de diversão à sua coleção.</p>
                             <p class="text-left"><strong>Altura:</strong> 5cm</p>
                         </div>
                     </div>

@@ -12,7 +12,9 @@ import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 import MinionGuarda from "./containers/MinionGuarda";
 import ReiMinion from "./containers/ReiMinion";
 import MinionBombeiro from "./containers/MinionBombeiro";
-
+import MinionDePijama from "./containers/MinionDePijama";
+import MinionDonoDaLua from "./containers/MinionDonoDaLua";
+import SenhoraMinion from "./containers/SenhoraMinion";
 export default function Routes() {
   return (
     <Switch>
@@ -27,6 +29,15 @@ export default function Routes() {
       </Route>
       <Route exact path="/MinionBombeiro">
         <MinionBombeiro />
+      </Route>
+      <Route exact path="/MinionDePijama">
+        <MinionDePijama />
+      </Route>
+      <Route exact path="/MinionDonoDaLua">
+        <MinionDonoDaLua />
+      </Route>
+      <Route exact path="/SenhoraMinion">
+        <SenhoraMinion />
       </Route>
       <UnauthenticatedRoute exact path="/login">
         <Login />

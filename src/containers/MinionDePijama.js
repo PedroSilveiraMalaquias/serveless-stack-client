@@ -1,6 +1,6 @@
 import React, {useEffect } from "react";
 import { useAppContext } from "../libs/contextLib";
-import "./ReiMinion.css";
+import "./MinionDePijama.css";
 export default function Home() {
   const { isAuthenticated } = useAppContext();
   useEffect(() =>[isAuthenticated]);
@@ -10,14 +10,14 @@ export default function Home() {
         <div class="container">
           <div class="row">
             <div class="col-5">
-              <img src="Rei-Minion.png" alt="" class="img-thumbnail"/>
+              <img src="Minion-de-pijama.png" alt="" class="img-thumbnail"/>
             </div>
             <div class="col">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h1>Rei Minion</h1>
-                            <p class="text-left">O rei minion adora mandar. Adquira agora mesmo e coloque ordem no seu reino, digo, na sua coleção!</p>
+                            <h1>Minion de pijama</h1>
+                            <p class="text-left">O minion de pijama é a companhia perfeita para as suas noites. Dorminhoco e preguiçoso, ele já vem pronto para uma soneca.</p>
                             <p class="text-left"><strong>Altura:</strong> 5cm</p>
                         </div>
                     </div>
