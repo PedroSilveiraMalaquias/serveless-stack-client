@@ -4,6 +4,8 @@ import "./MinionBombeiro.css";
 export default function Home() {
   const { isAuthenticated } = useAppContext();
   useEffect(() =>[isAuthenticated]);
+  
+
   return (
     <div className="Home">      
      <div className="lander">

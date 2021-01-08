@@ -35,7 +35,7 @@ export default function Settings() {
       source: token.id
     });
 
-    alert("Compra realizada com sucesso!");
+    alert("Compra realizada com Sucesso!");
     history.push("/");
   } catch (e) {
     onError(e);
